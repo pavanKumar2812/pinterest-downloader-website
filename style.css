@@ -272,17 +272,18 @@ footer p {
     }
     
     header .container {
+        flex-direction: column;
         gap: 15px;
+        text-align: center;
+    }
+    
+    .logo {
+        justify-content: center;
     }
     
     .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    
-    .feature-grid,
-    .steps {
-        grid-template-columns: 1fr;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -485,5 +486,95 @@ header .cta-button {
     .visual-steps {
         margin-top: 40px;
         padding-top: 40px;
+    }
+}
+
+/* NEW: Settings Tip Styles - IMPROVED */
+.settings-tip {
+    margin-top: 60px;
+    padding: 40px;
+    background: #ffffff; /* White background */
+    border: 2px solid #E60023; /* Stronger Pinterest red border */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(230, 0, 35, 0.2); /* Stronger shadow */
+    text-align: center; /* Center the container content */
+}
+
+.settings-tip h3 {
+    font-size: 1.7rem; /* Slightly larger heading */
+    color: #E60023;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.settings-tip p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 auto 15px;
+    max-width: 600px; /* Limit width of main text for readability */
+}
+
+.tip-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* IMPORTANT: Left align instructions */
+    gap: 15px; /* Increased gap */
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: 500;
+    color: #444;
+    margin: 20px auto; /* Center the block and add vertical spacing */
+    max-width: 450px; /* Increase width limit for instructions */
+    text-align: left; /* Ensure text is left-aligned within the block */
+    padding: 15px 20px;
+    background-color: #fcfcfc; /* Subtle background for the instruction block */
+    border-left: 4px solid #E60023;
+    border-radius: 6px;
+}
+
+.tip-instructions code {
+    background: #ffe3e8; /* Lighter red/pink background for code */
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #E60023;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.tip-step {
+    font-weight: 600; /* Bold the entire step line */
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tip-step span {
+    font-weight: 700;
+    color: #E60023; /* Ensure step number color is visible */
+}
+
+.tip-note {
+    font-style: italic;
+    font-size: 1rem !important; /* Standard size */
+    color: #888 !important;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Ensure mobile layout is still clean */
+@media (max-width: 768px) {
+    .settings-tip {
+        margin-top: 40px;
+        padding: 25px;
+    }
+    
+    .settings-tip h3 {
+        font-size: 1.5rem;
+    }
+    
+    .tip-instructions {
+        max-width: 100%; /* Use full width on mobile */
     }
 }
